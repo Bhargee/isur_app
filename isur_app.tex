@@ -3,6 +3,7 @@
 \usepackage{pbox}
 \begin{document}
 
+\subsection*{Introduction}
 I work with Prof. Tim Bretl’s research group, which operates in the intersection
 of robotics and neuroscience. One of their major projects is affordable and
 accessible prosthetic devices. To that end, they’ve designed a 3D printed
@@ -17,8 +18,9 @@ an intended object. The commanding process makes the act of grasping an object
 unnatural and time consuming, often motivating users to use their non-prosthetic
 arm rather than the prosthesis. We plan to improve this deficiency by having
 computer vision algorithms detect the intended object and choose an appropriate
-grip for the prosthetic hand automatically. \newline
+grip for the prosthetic hand automatically.
 
+\subsection*{Methods}
 The camera will be added to the current prosthetic hand design. A camera
 compartment will be added near the palm of the hand and the thumb servo
 compartment has been shifted outward slightly. The camera’s viewing direction
@@ -52,15 +54,16 @@ efficacy of object detection and segmentation algorithm by comparing chosen
 prosthesis grips with the grips chosen by a person in the original annotated
 footage. \newline
 
+\subsection*{Expected Results}
 We expect that automating grip selection will yield better and faster results
 than the alternative. We expect the stereo camera to assist the process in two
 ways: 1) using the provided depth info to know when we are near an object, and
 2) using both RGB and Depth data to recognize the intended object. We expect
 these benefits to be clear from results showing that a user can more quickly
 grasp objects than before. We also plan to provide a video demonstration of the
-process and publish the result in an appropriate conference or journal. \newline
+process and publish the result in an appropriate conference or journal.
 
-The expected timeline is as follows: \newline
+\subsection*{Schedule}
 \begin{tabular}{| l | l |}
 \hline
 Aug 24 & Buy camera \\ \hline
@@ -80,6 +83,9 @@ Mar 9 & \pbox{20cm}{a) Write paper \\
                     b) Video demo} \\ \hline
 Mar 15 & Submit paper \\ \hline
 \end{tabular}
+
+\subsection*{References}
+TODO
 
 \end{document}
 
