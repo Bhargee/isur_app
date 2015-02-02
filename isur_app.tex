@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{pbox}
+\begin{document}
+
+I work with Prof. Tim Bretl’s research group, which operates in the intersection
+of robotics and neuroscience. One of their major projects is affordable and
+accessible prosthetic devices. To that end, they’ve designed a 3D printed
+prosthetic hand geared towards use by people in third world countries. The hand
+features actuators that allow for different grips, and is controlled by nerve
+signals near the prosthesis. The goal of this project is to augment the current
+prosthetic hand with a stereo camera that can be used to detect objects the user
+intends to grasp and automatically have the hand assume the appropriate grip.
+This project is motivated by a current deficiency in prosthetic hand designs
+that require the user to command the hand to assume a specific grip for grasping
+an intended object. The commanding process makes the act of grasping an object
+unnatural and time consuming, often motivating users to use their non-prosthetic
+arm rather than the prosthesis. We plan to improve this deficiency by having
+computer vision algorithms detect the intended object and choose an appropriate
+grip for the prosthetic hand automatically. \newline
+
+The camera will be added to the current prosthetic hand design. A camera
+compartment will be added near the palm of the hand and the thumb servo
+compartment has been shifted outward slightly. The camera’s viewing direction
+will be chosen to face in the direction of intended grasping objects; i.e. when
+grasping an object, the palm generally faces the object. See the figure below.
+\newline
+
+The chosen camera is a DUO mini lx. This is a stereo camera that can provide RGB
+and depth images in indoor and outdoor scenes. The motivation for a depth camera
+is two-fold: i) we don’t want the hand to constantly adjust to different grips
+based on what the camera sees, so the depth allows us to know if we are close to
+an object, and ii) the 3D shape of the object can potentially be leveraged for
+grip selection. \newline
+
+Using the RGB and depth information from the camera, we want to
+locate the object the user intends to grasp. There are many ways that this could
+be done. Examples include (i) identifying the contour, (ii) decomposing the
+object into primitives, (iii) building a voxel representation from depth, (iv)
+and matching against a bank of objects with machine learning. \newline
+
+Once the intended object has been segmented in the image/video, we want to
+choose the appropriate grip for grasping. The grip depends on the object’s
+geometry, and the mapping between geometry and grip must be determined
+experimentally. \newline
+
+The experimental component of this project will be determining the association
+of object geometries to grip type. We will put the DUO mini in a glove and take
+video footage of people grasping various objects. This footage will be annotated
+with the grasps that are appropriate for given objects. Then we have to test the
+efficacy of object detection and segmentation algorithm by comparing chosen
+prosthesis grips with the grips chosen by a person in the original annotated
+footage. \newline
+
+We expect that automating grip selection will yield better and faster results
+than the alternative. We expect the stereo camera to assist the process in two
+ways: 1) using the provided depth info to know when we are near an object, and
+2) using both RGB and Depth data to recognize the intended object. We expect
+these benefits to be clear from results showing that a user can more quickly
+grasp objects than before. We also plan to provide a video demonstration of the
+process and publish the result in an appropriate conference or journal. \newline
+
+The expected timeline is as follows: \newline
+\begin{tabular}{| l | l |}
+\hline
+Aug 24 & Buy camera \\ \hline
+Sep 14 & \pbox{20cm}{Camera driver to collect and save RGBD images \\
+                      Augment current hand with camera compartment  } \\ \hline
+
+\hline
+\end{tabular}
+
+\end{document}
+
